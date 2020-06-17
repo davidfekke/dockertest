@@ -1,11 +1,11 @@
 FROM mhart/alpine-node:12.18.0
 
-EXPOSE 3000
-
-COPY package*.json ./
+RUN mkdir /src
+COPY package*.json /src
+WORKDIR /src
 
 RUN npm install
 
-COPY . .
+COPY . /src
 
 CMD ["npm", "start"]
