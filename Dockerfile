@@ -1,11 +1,7 @@
 FROM mhart/alpine-node:12.18.0
 
-RUN mkdir /src
-COPY package.json /src
-WORKDIR /src
+WORKDIR /expressapp/
 
-RUN npm install
+# RUN npm install
 
-COPY . /src
-
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
